@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Faizan Shaikh — DevOps & Cloud Engineer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Simple icon library (replace with your icons if you want) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yH4xN7n0a0Yq5p3Vxv+Yw0W0q9xg8zFz0L8Kq8e3G0kGQx9g8tZb0x8g8W9Z4V2o1Y4V3p9e9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root{
+      --bg1:#0f2d63;
+      --bg2:#6b2fe6;
+      --card:#ffffff10;
+      --glass: rgba(255,255,255,0.06);
+      --accent: #ffd400;
+      --muted: #cfe5ff;
+      --glass-2: rgba(255,255,255,0.04);
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(8,11,30,0.45);
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      background: linear-gradient(160deg,var(--bg1) 10%, #152f6b 30%, #4b2aa6 70%, var(--bg2) 100%);
+      color: #e8f2ff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .wrap{
+      max-width:920px;
+      margin:36px auto;
+      padding:36px;
+    }
+
+    .hero{
+      text-align:center;
+      padding:36px 18px 22px;
+    }
+    .name{
+      font-size:44px;
+      font-weight:800;
+      letter-spacing:1px;
+      color: #ffea2f;
+      margin:0 0 10px;
+    }
+    .subtitle{
+      margin:0 0 18px;
+      color: #d7ecff;
+      font-weight:500;
+      font-size:16px;
+    }
+
+    .icons-row{
+      display:flex;
+      gap:18px;
+      justify-content:center;
+      align-items:center;
+      flex-wrap:wrap;
+      margin:12px 0 26px;
+    }
+    .icon{
+      width:56px;
+      height:56px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      background: linear-gradient(180deg,var(--glass),var(--glass-2));
+      box-shadow: inset 0 -4px 0 rgba(255,255,255,0.02), 0 6px 18px rgba(0,0,0,0.35);
+      font-size:24px;
+      color:#fff;
+    }
+
+    /* Cards */
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border-radius: var(--radius);
+      padding:28px;
+      margin:26px 0;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .card h3{
+      margin:0 0 14px;
+      color:#aee0ff;
+      font-size:20px;
+      text-align:center;
+    }
+
+    .about p{
+      color: #dbeeff;
+      line-height:1.6;
+      text-align:center;
+      max-width:760px;
+      margin:0 auto;
+    }
+
+    /* skills table */
+    .skills-table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:8px;
+    }
+    .skills-table th,
+    .skills-table td{
+      padding:12px 14px;
+      border:1px solid rgba(255,255,255,0.06);
+      text-align:left;
+      font-size:14px;
+      color:#e6f7ff;
+    }
+    .skills-table thead th{
+      background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      color:#ffd79a;
+      font-weight:700;
+    }
+
+    /* contact grid */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:18px;
+      margin-top:12px;
+    }
+    .contact-card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border-radius:14px;
+      padding:20px;
+      text-align:center;
+      color:#ffd;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+      transition: transform .18s ease;
+    }
+    .contact-card:hover{ transform: translateY(-6px); }
+    .contact-card h4{
+      margin:0 0 8px;
+      color:#ffd27f;
+    }
+    .contact-card a{ color:#bfe9ff; text-decoration:none; opacity:0.95; }
+
+    footer{
+      text-align:center;
+      margin:26px 0 60px;
+      color: rgba(255,255,255,0.6);
+      font-size:13px;
+    }
+
+    /* responsive */
+    @media (max-width:880px){
+      .wrap{ padding:20px; }
+      .name{ font-size:36px; }
+      .contact-grid{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="name">FAIZAN SHAIKH</div>
+      <div class="subtitle">DevOps & Cloud Engineer | AWS | Docker | Kubernetes | Terraform</div>
+
+      <div class="icons-row" aria-hidden="true">
+        <!-- Replace these <img> or <i> blocks with your real logo files -->
+        <div class="icon" title="AWS"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" style="width:34px"></div>
+        <div class="icon" title="Docker"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" style="width:36px" alt="docker"></div>
+        <div class="icon" title="Kubernetes"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg" style="width:34px" alt="k8s"></div>
+        <div class="icon" title="Ansible"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/ansible-original.svg" style="width:34px" alt="ansible"></div>
+        <div class="icon" title="Terraform"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg" style="width:32px" alt="tf"></div>
+        <div class="icon" title="Prometheus"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/prometheus/prometheus-original.svg" style="width:32px" alt="prom"></div>
+        <div class="icon" title="Jenkins"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jenkins/jenkins-original.svg" style="width:34px" alt="jenkins"></div>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="card about">
+      <h3>About Me</h3>
+      <p>
+        Eager and driven DevOps engineer with hands-on experience in automating deployments, optimizing cloud
+        infrastructure and improving reliability. Passionate about delivering scalable and secure cloud solutions
+        that improve productivity.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="card">
+      <h3>Skills & Tools</h3>
+      <div style="overflow-x:auto;">
+        <table class="skills-table" role="table" aria-label="Skills table">
+          <thead>
+            <tr>
+              <th style="width:160px">Category</th>
+              <th>Technologies</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cloud</td>
+              <td>AWS (EC2, VPC, S3, IAM, SNS, EBS, CloudWatch, Load Balancer, Auto Scaling, ECS, Lambda)</td>
+            </tr>
+            <tr>
+              <td>Containers</td>
+              <td>Docker, Kubernetes, EKS</td>
+            </tr>
+            <tr>
+              <td>Automation</td>
+              <td>Ansible, Terraform</td>
+            </tr>
+            <tr>
+              <td>Monitoring</td>
+              <td>Prometheus, Grafana</td>
+            </tr>
+            <tr>
+              <td>CI/CD</td>
+              <td>Jenkins, GitHub Actions, CodePipeline, CodeBuild</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="card">
+      <h3>Contact</h3>
+      <div class="contact-grid" style="margin-top:16px;">
+        <div class="contact-card">
+          <h4>Email</h4>
+          <a href="mailto:faizans7745@example.com">faizans7745@example.com</a>
+        </div>
+        <div class="contact-card">
+          <h4>LinkedIn</h4>
+          <a href="https://linkedin.com/in/faizan-shaikh8888" target="_blank" rel="noopener">linkedin.com/in/faizan-shaikh8888</a>
+        </div>
+        <div class="contact-card">
+          <h4>GitHub</h4>
+          <a href="https://github.com/faizan7745" target="_blank" rel="noopener">github.com/faizan7745</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>© 2025 Faizan Shaikh. All Rights Reserved.</footer>
+  </div>
+</body>
+</html>
